@@ -33,8 +33,8 @@ export const Progress = ({ file, setFile, setInputVal }) => {
   }
 
   return (
-    <div className={classes.progress}>
+    <Box className={classes.progress}>
       <LinearProgressWithLabel variant='determinate' value={progress} />
-    </div>
+    </Box>
   )
 }

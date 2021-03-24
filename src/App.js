@@ -21,7 +21,12 @@ const App = () => {
     >
       <Fragment>
         <Container maxWidth='lg'>
-          {selectedImage && <Modal selectedImage={selectedImage} />}
+          {selectedImage && (
+            <Modal
+              selectedImage={selectedImage}
+              setSelectedImage={setSelectedImage}
+            />
+          )}
           <Header />
           <Form />
           <ListImages setSelectedImage={setSelectedImage} />
