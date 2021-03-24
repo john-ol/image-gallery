@@ -21,11 +21,19 @@ export const Form = () => {
     ]
 
     const selectedFile = event.target.files[0]
-    if (selectedFile && types.includes(selectedFile.type)) {
+
+    if (
+      selectedFile &&
+      types.includes(selectedFile.type) &&
+      selectedFile.size < 4000000
+    ) {
       setFile(selectedFile)
     } else {
       setFile(null)
-      enqueueSnackbar('You should select an image file', { variant: 'error' })
+      enqueueSnackbar(
+        'You should select an image file, or your file is too big',
+        { variant: 'error' }
+      )
     }
   }
   return (
