@@ -8,7 +8,6 @@ import { Modal } from './components/Modal/Modal'
 
 const App = () => {
   const [selectedImage, setSelectedImage] = useState(null)
-
   return (
     <SnackbarProvider
       maxSnack={2}

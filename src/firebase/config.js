@@ -2,13 +2,13 @@ import firebase from 'firebase/app'
 import 'firebase/storage'
 import 'firebase/firestore'
 
-var firebaseConfig = {
-  apiKey: 'AIzaSyDlxPJIlohZS5PAKF9uB9cDo6emvBbT6bI',
-  authDomain: 'image-gallery-408aa.firebaseapp.com',
-  projectId: 'image-gallery-408aa',
-  storageBucket: 'image-gallery-408aa.appspot.com',
-  messagingSenderId: '329690443308',
-  appId: '1:329690443308:web:4c3fc3ff60ed7fc3072b89',
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 }
 firebase.initializeApp(firebaseConfig)
 
